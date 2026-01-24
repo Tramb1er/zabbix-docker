@@ -68,7 +68,7 @@ chown www-data:www-data "$ZBX_WEB_CONF"
 mkdir -p /var/log/zabbix
 mkdir -p /var/log/nginx
 mkdir -p /var/log/supervisor
-chown -R zabbix:zabbix /var/log/zabbix
+chown -R root:root /var/log/zabbix
 
 echo "Контейнер готов к запуску!"
 
