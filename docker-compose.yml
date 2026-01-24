@@ -3,9 +3,9 @@ services:
     image: postgres:16-alpine
     container_name: zabbix-postgres
     environment:
-      POSTGRES_DB: zabbix
-      POSTGRES_USER: zabbix
-      POSTGRES_PASSWORD: Adminmcko
+      POSTGRES_DB: fctadmin
+      POSTGRES_USER: fctadmin
+      POSTGRES_PASSWORD: StdF#37fct
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
@@ -22,7 +22,7 @@ services:
     build: .
     container_name: zabbix-server
     ports:
-      - "80:80"
+      - "8080:80"
       - "10051:10051"
     environment:
       DB_SERVER_HOST: postgres
